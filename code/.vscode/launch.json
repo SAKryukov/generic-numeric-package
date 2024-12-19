@@ -1,0 +1,52 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "Debug TestDoor",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "windows": {
+                "program": "${workspaceFolder}/output.Debug.AnyCPU/TestDoor.exe",    
+            },
+            "program": "${workspaceFolder}/output.Debug.AnyCPU/TestDoor",
+            "stopAtEntry": true,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Debug Test.Non-Emumeration",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "windows": {
+                "program": "${workspaceFolder}/output.Debug.AnyCPU/Test.Non-Emumeration.exe",
+            },
+            "program": "${workspaceFolder}/output.Debug.AnyCPU/Test.Non-Emumeration",
+            "stopAtEntry": true,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Debug TestGrid",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "windows": {
+                "program": "${workspaceFolder}/output.Debug.AnyCPU/TestGrid.exe",
+            },
+            "program": "${workspaceFolder}/output.Debug.AnyCPU/TestGrid",
+            "stopAtEntry": true,
+            "console": "internalConsole"
+        },
+        {
+            "name": "Debug TestZoo",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "windows": {
+                "program": "${workspaceFolder}/output.Debug.AnyCPU/TestZoo.exe",
+            },
+            "program": "${workspaceFolder}/output.Debug.AnyCPU/TestZoo",
+            "stopAtEntry": true,
+            "console": "internalConsole"
+        },
+    ]
