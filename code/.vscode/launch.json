@@ -1,0 +1,16 @@
+{
+    "version": "0.2.0",
+    "configurations": [        
+        {
+            "name": "Debug",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "windows": {
+                "program": "${workspaceFolder}/output.Debug.AnyCPU/TestFloatingPoint.exe",    
+            },
+            "program": "${workspaceFolder}/output.Debug.AnyCPU/TestFloatingPoint",
+            "stopAtEntry": true,
+            "console": "internalConsole"
+        },
+    ]

@@ -1,6 +1,12 @@
+/*
+    Copyright (C) 2024 by Sergey A Kryukov
+    https://www.SAKryukov.org
+    https://github.com/SAKryukov
+*/
+
 namespace GenericNumerics.Package {
 
-    public class StructuredPackage<NUM> where NUM :
+    public static class StructuredPackage<NUM> where NUM :
         System.IEquatable<NUM>,
         System.IParsable<NUM>,
         System.ISpanParsable<NUM>,
@@ -21,7 +27,7 @@ namespace GenericNumerics.Package {
     {
     } //StructuredPackage<NUM>
 
-    public class Package<NUM> where NUM :
+    public static class Package<NUM> where NUM :
         System.IComparable<NUM>,
         System.IEquatable<NUM>,
         System.IParsable<NUM>,
@@ -58,30 +64,20 @@ namespace GenericNumerics.Package {
         System.Numerics.IUnaryPlusOperators<NUM, NUM>
     {
 
-        public class OperatorSample {
-            public NUM Calculate(NUM a, NUM b) =>
+        public static class OperatorSample {
+            public static NUM Calculate(NUM a, NUM b) =>
                 (a * b) / (a + b);
-            public NUM More(NUM a) =>
+            public static NUM More(NUM a) =>
                 -a;
         } //class OperatorSample
 
-        public class MathFunctions {
-            public NUM Calculate(NUM a, NUM b) =>
+        public static class MathFunctions {
+            public static NUM Calculate(NUM a, NUM b) =>
                 NUM.Pow(a, b) * NUM.Sqrt(a);
-            public NUM CalculateMore(NUM a, NUM b) =>
+            public static NUM CalculateMore(NUM a, NUM b) =>
                 NUM.Log(a, b) * NUM.Exp(a);
         } //class MathFunctions
 
     } //class Package
-
-    class DoubleSpecialization : Package<double> {
-    }
-    class FloatSpecialization : Package<float> {
-    }
-    class HalfSpecialization : Package<System.Half> {
-    }
-
-    class ComplexSpecialization : StructuredPackage<System.Numerics.Complex> {
-    }
 
 }
