@@ -1,5 +1,4 @@
-namespace GenericNumericsDemo {
-using System.Numerics;
+namespace GenericNumerics.Package {
 
     public class Package<NUM> where NUM :
         System.IComparable<NUM>,
