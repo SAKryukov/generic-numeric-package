@@ -1,5 +1,26 @@
 namespace GenericNumerics.Package {
 
+    public class StructuredPackage<NUM> where NUM :
+        System.IEquatable<NUM>,
+        System.IParsable<NUM>,
+        System.ISpanParsable<NUM>,
+        System.IUtf8SpanParsable<NUM>,
+        System.Numerics.IAdditionOperators<NUM, NUM, NUM>,
+        System.Numerics.IAdditiveIdentity<NUM, NUM>,
+        System.Numerics.IDecrementOperators<NUM>,
+        System.Numerics.IDivisionOperators<NUM, NUM, NUM>,
+        System.Numerics.IEqualityOperators<NUM, NUM, bool>,
+        System.Numerics.IIncrementOperators<NUM>,
+        System.Numerics.IMultiplicativeIdentity<NUM, NUM>,
+        System.Numerics.IMultiplyOperators<NUM, NUM, NUM>,
+        System.Numerics.INumberBase<NUM>,
+        System.Numerics.ISignedNumber<NUM>,
+        System.Numerics.ISubtractionOperators<NUM, NUM, NUM>,
+        System.Numerics.IUnaryNegationOperators<NUM, NUM>,
+        System.Numerics.IUnaryPlusOperators<NUM, NUM>
+    {
+    } //StructuredPackage<NUM>
+
     public class Package<NUM> where NUM :
         System.IComparable<NUM>,
         System.IEquatable<NUM>,
@@ -59,5 +80,8 @@ namespace GenericNumerics.Package {
     }
     class HalfSpecialization : Package<System.Half> {
     }
-     
+
+    class ComplexSpecialization : StructuredPackage<System.Numerics.Complex> {
+    }
+
 }
