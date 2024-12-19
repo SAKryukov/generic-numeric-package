@@ -1,4 +1,4 @@
 @echo off
 
-dotnet build GenericNumerics.sln -c Debug
-dotnet build GenericNumerics.sln -c Release
+dotnet build -c Debug
+dotnet build -c Release
