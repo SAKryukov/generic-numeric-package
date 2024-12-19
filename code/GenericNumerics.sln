@@ -5,7 +5,7 @@ VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericNumerics", "GenericNumerics\GenericNumerics.csproj", "{8A660242-B4AC-4EC4-A85D-5E720E3F5310}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFloatingPoint", "Tests\TestFloatingPoint\TestFloatingPoint\TestFloatingPoint.csproj", "{2889A509-CA46-493C-8508-5E3EFFBE814D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFloatingPoint", "Tests\TestFloatingPoint\TestFloatingPoint.csproj", "{2889A509-CA46-493C-8508-5E3EFFBE814D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

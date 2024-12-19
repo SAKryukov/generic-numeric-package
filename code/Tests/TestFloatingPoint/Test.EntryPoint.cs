@@ -4,10 +4,12 @@
     https://github.com/SAKryukov
 */
 
-namespace Tests {
-    using DoubleSpecialization = GenericNumerics.Package.Package<double, GenericNumerics.Package.DoubleConverter>;
-    using FloatSpecialization = GenericNumerics.Package.Package<float, GenericNumerics.Package.FloatConverter>;
-    using HalfSpecialization = GenericNumerics.Package.Package<System.Half, GenericNumerics.Package.HalfConverter>;
+namespace SA.Tests {
+    using DoubleSpecialization = GenericNumerics.Package<double, GenericNumerics.DoubleConverter>;
+    using FloatSpecialization = GenericNumerics.Package<float, GenericNumerics.FloatConverter>;
+    using HalfSpecialization = GenericNumerics.Package<System.Half, GenericNumerics.HalfConverter>;
+    using Complex = System.Numerics.Complex;
+    using ComplexSpecialization = GenericNumerics.StructuredPackage<System.Numerics.Complex>;
 
     using Console = System.Console;
 
@@ -23,6 +25,7 @@ namespace Tests {
             Console.WriteLine(Test1(1, 2));
             Console.WriteLine(Test2(3, 4));
             Console.WriteLine(Test3((System.Half)0.5, (System.Half)0.6));
+            Console.WriteLine(ComplexSpecialization.Sample.Calculate(new Complex(1, 2), new Complex(3, 4)));
         } //Main
 
     } //class Tests
