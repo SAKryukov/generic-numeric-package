@@ -5,9 +5,9 @@
 */
 
 namespace Tests {
-    using DoubleSpecialization = GenericNumerics.Package.Package<double>;
-    using FloatSpecialization = GenericNumerics.Package.Package<float>;
-    using HalfSpecialization = GenericNumerics.Package.Package<System.Half>;
+    using DoubleSpecialization = GenericNumerics.Package.Package<double, GenericNumerics.Package.DoubleConverter>;
+    using FloatSpecialization = GenericNumerics.Package.Package<float, GenericNumerics.Package.FloatConverter>;
+    using HalfSpecialization = GenericNumerics.Package.Package<System.Half, GenericNumerics.Package.HalfConverter>;
 
     using Console = System.Console;
 
