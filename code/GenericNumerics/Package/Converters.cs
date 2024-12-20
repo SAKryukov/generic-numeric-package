@@ -4,34 +4,36 @@
     https://github.com/SAKryukov
 */
 
+using System.Numerics;
+
 namespace SA.GenericNumerics {
 
     public interface IConverter<NUM> {
-        public NUM FromInteger(int self);
-        NUM FromHalf(System.Half self);
-        public NUM FromFloat(float self);
-        public NUM FromDouble(double self);
+        static abstract NUM FromInteger(int value);
+        static abstract NUM FromHalf(System.Half value);
+        static abstract NUM FromFloat(float value);
+        static abstract NUM FromDouble(double value);
     } //interface IConverter
 
     public struct HalfConverter : IConverter<System.Half> {
-        public System.Half FromInteger(int self) => (System.Half)self;
-        public System.Half FromHalf(System.Half self) => self;
-        public System.Half FromFloat(float self) => (System.Half)self;
-        public System.Half FromDouble(double self) => (System.Half)self;
+        public static System.Half FromInteger(int value) => (System.Half)value;
+        public static System.Half FromHalf(System.Half value) => value;
+        public static System.Half FromFloat(float value) => (System.Half)value;
+        public static System.Half FromDouble(double value) => (System.Half)value;
     } //HalfConverter
 
     public struct FloatConverter : IConverter<float> {
-        public float FromInteger(int self) => self;
-        public float FromHalf(System.Half self) => (float)self;
-        public float FromFloat(float self) => self;
-        public float FromDouble(double self) => (float)self;
+        public static float FromInteger(int value) => value;
+        public static float FromHalf(System.Half value) => (float)value;
+        public static float FromFloat(float value) => value;
+        public static float FromDouble(double value) => (float)value;
     } //HalfConverter
 
     public struct DoubleConverter : IConverter<double> {
-        public double FromInteger(int self) => self;
-        public double FromHalf(System.Half self) => (double)self;
-        public double FromFloat(float self) => self;
-        public double FromDouble(double self) => self;
+        public static double FromInteger(int value) => value;
+        public static double FromHalf(System.Half value) => (double)value;
+        public static double FromFloat(float value) => value;
+        public static double FromDouble(double value) => value;
     } //HalfConverter
 
-    }
+}

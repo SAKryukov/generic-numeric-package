@@ -21,19 +21,17 @@ namespace SA.GenericNumerics {
         System.Numerics.IBinaryFloatingPointIeee754<NUM>
         where CONVERTER: IConverter<NUM>, new()
     {
-        static readonly CONVERTER converter = new();
-        public static CONVERTER Converter => converter;
 
         public static class OperatorSample {
             public static NUM Calculate(NUM a, NUM b) =>
-               Converter.FromInteger(2) +  a * b / (a + b);
+               CONVERTER.FromInteger(2) +  a * b / (a + b);
             public static NUM CalculateMore(NUM a) =>
                 -a;
         } //class OperatorSample
 
         public static class MathFunctions {
             public static NUM Calculate(NUM a, NUM b) =>
-                Converter.FromFloat(0.33f) + NUM.Pow(a, b) * NUM.Sqrt(a);
+                CONVERTER.FromFloat(0.33f) + NUM.Pow(a, b) * NUM.Sqrt(a);
             public static NUM CalculateMore(NUM a, NUM b) =>
                 NUM.Log(a, b) * NUM.Exp(a);
         } //class MathFunctions
