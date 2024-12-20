@@ -12,7 +12,10 @@
             },
             "program": "${workspaceFolder}/output.Debug.AnyCPU/TestFloatingPoint",
             "stopAtEntry": true,
-            "console": "internalConsole"
+            "logging":{
+                "moduleLoad": false
+            },
+            "console": "internalConsole",
         },
 
     ]
