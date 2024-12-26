@@ -5,15 +5,14 @@
 */
 
 namespace SA.Tests {
-    using DoubleSpecialization = SA.GenericNumerics.Package<double, GenericNumerics.DoubleConverter>;
+    using DoubleSpecialization = GenericNumerics.Package<double, GenericNumerics.DoubleConverter>;
     using FloatSpecialization = GenericNumerics.Package<float, GenericNumerics.FloatConverter>;
     using HalfSpecialization = GenericNumerics.Package<System.Half, GenericNumerics.HalfConverter>;
     using Complex = System.Numerics.Complex;
     using ComplexSpecialization = GenericNumerics.StructuredPackage<System.Numerics.Complex>;
+    using static System.Console;
 
-    using Console = System.Console;
-
-    static class Tests {
+    static class Tests {        
         static double Test1(double a, double b) =>
             DoubleSpecialization.MathFunctions.Calculate(a, b);
         static float Test2(float a, float b) =>
@@ -22,10 +21,10 @@ namespace SA.Tests {
             HalfSpecialization.MathFunctions.CalculateMore(a, b);
 
         static void Main() {
-            Console.WriteLine(Test1(1, 2));
-            Console.WriteLine(Test2(3, 4));
-            Console.WriteLine(Test3((System.Half)0.5, (System.Half)0.6));
-            Console.WriteLine(ComplexSpecialization.Sample.Calculate(new Complex(1, 2), new Complex(3, 4)));
+            WriteLine(Test1(1, 2));
+            WriteLine(Test2(3, 4));
+            WriteLine(Test3((System.Half)0.5, (System.Half)0.6));
+            WriteLine(ComplexSpecialization.Sample.Calculate(new Complex(1, 2), new Complex(3, 4)));
         } //Main
 
     } //class Tests
