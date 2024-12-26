@@ -19,7 +19,7 @@ namespace SA.GenericNumerics {
 
     public static class Package<NUM, CONVERTER> where NUM :
         System.Numerics.IBinaryFloatingPointIeee754<NUM>
-        where CONVERTER: IConverter<NUM>, new()
+        where CONVERTER: IConverter<NUM>
     {
 
         public static class OperatorSample {

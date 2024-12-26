@@ -6,8 +6,4 @@
 
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <RootNamespace>StateMachines</RootNamespace>
-  </PropertyGroup>
-
 </Project>

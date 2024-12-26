@@ -9,11 +9,11 @@
  
   <PropertyGroup> <!-- customize:  -->
     <TargetFramework>net9.0</TargetFramework>
-    <RootNamespace>SA</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup> <!-- change value, don't change property name: -->
     <_intermediateOutputPathRoot>$(SolutionDir).intermediateOutput</_intermediateOutputPathRoot>
+    <RootNamespace>$(RootNamespace)</RootNamespace>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)'=='Release'">
@@ -23,7 +23,7 @@
 
   <PropertyGroup>
 
-    <NoWarn>$(NoWarn);NETSDK1138</NoWarn>
+    <NoWarn>$(NoWarn);NETSDK1138;IDE0130</NoWarn>
 
     <BaseIntermediateOutputPath>$([System.IO.Path]::Combine(
         $(SolutionDir),

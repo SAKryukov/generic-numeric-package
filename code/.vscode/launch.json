@@ -3,6 +3,14 @@
     "configurations": [        
 
         {
+            "name": "Build All", // just builds
+            "type": "node", //node.js with an arg to do nothing
+            "args": ["none"],
+            "request": "launch",
+            "postDebugTask": "Build All",
+            "console": "internalConsole"
+        },
+        {
             "name": "Debug",
             "type": "coreclr",
             "request": "launch",

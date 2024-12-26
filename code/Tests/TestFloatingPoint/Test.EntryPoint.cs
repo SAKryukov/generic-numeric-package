@@ -5,7 +5,7 @@
 */
 
 namespace SA.Tests {
-    using DoubleSpecialization = GenericNumerics.Package<double, GenericNumerics.DoubleConverter>;
+    using DoubleSpecialization = SA.GenericNumerics.Package<double, GenericNumerics.DoubleConverter>;
     using FloatSpecialization = GenericNumerics.Package<float, GenericNumerics.FloatConverter>;
     using HalfSpecialization = GenericNumerics.Package<System.Half, GenericNumerics.HalfConverter>;
     using Complex = System.Numerics.Complex;
