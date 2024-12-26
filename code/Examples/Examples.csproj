@@ -7,7 +7,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
-    <ProjectReference Include="../../GenericNumerics/GenericNumerics.csproj" />
+    <ProjectReference Include="../GenericNumerics/GenericNumerics.csproj" />
   </ItemGroup>
 
 </Project>

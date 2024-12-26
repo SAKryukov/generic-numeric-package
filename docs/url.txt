@@ -1,0 +1,6 @@
+﻿https://math.libretexts.org/Courses/Mount_Royal_University/MATH_2200%3A_Calculus_for_Scientists_II/2%3A_Techniques_of_Integration/2.5%3A_Numerical_Integration_-_Midpoint%2C_Trapezoid%2C_Simpson's_rule
+https://en.wikipedia.org/wiki/Clenshaw–Curtis_quadrature
+https://people.math.ethz.ch/~waldvoge/Papers/fejer.pdf
+
+There are exercises (for testing)
+https://www.whitman.edu/mathematics/calculus_online/section08.06.html

@@ -7,9 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GenericNumerics", "GenericN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestFloatingPoint", "Tests\TestFloatingPoint\TestFloatingPoint.csproj", "{2889A509-CA46-493C-8508-5E3EFFBE814D}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Examples", "Examples", "{2FA6BE5A-9CAA-4569-B812-DF894DF543A8}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IntegrationComparison", "Examples\IntegrationComparison\IntegrationComparison.csproj", "{FF670007-4FEA-42FA-9709-572ED7264242}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Examples", "Examples/Examples.csproj", "{FF670007-4FEA-42FA-9709-572ED7264242}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,14 +27,5 @@ Global
 		{FF670007-4FEA-42FA-9709-572ED7264242}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF670007-4FEA-42FA-9709-572ED7264242}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF670007-4FEA-42FA-9709-572ED7264242}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {A6324645-EF08-4737-8B72-D543F26A2908}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{FF670007-4FEA-42FA-9709-572ED7264242} = {2FA6BE5A-9CAA-4569-B812-DF894DF543A8}
 	EndGlobalSection
 EndGlobal

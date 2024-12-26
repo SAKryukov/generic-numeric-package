@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="../../GenericNumerics/GenericNumerics.csproj" />
+    <ProjectReference Include="../../Examples/Examples.csproj" />
   </ItemGroup>
 
 </Project>

@@ -31,7 +31,7 @@ namespace SA.GenericNumerics {
 
         public static class MathFunctions {
             public static NUM Calculate(NUM a, NUM b) =>
-                CONVERTER.FromFloat(0.33f) + NUM.Pow(a, b) * NUM.Sqrt(a);
+                CONVERTER.FromDouble(0.33) + NUM.Pow(a, b) * NUM.Sqrt(a);
             public static NUM CalculateMore(NUM a, NUM b) =>
                 NUM.Log(a, b) * NUM.Exp(a);
         } //class MathFunctions
