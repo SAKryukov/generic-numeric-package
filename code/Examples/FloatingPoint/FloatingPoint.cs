@@ -4,6 +4,8 @@
     https://github.com/SAKryukov
 */
 
+using System.Security.Cryptography;
+
 namespace SA.GenericNumerics {
 
     public static class StructuredPackage<NUM> where NUM :

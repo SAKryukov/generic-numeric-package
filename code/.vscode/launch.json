@@ -14,7 +14,7 @@
             "name": "Debug",
             "type": "coreclr",
             "request": "launch",
-            "preLaunchTask": "build",
+            //"preLaunchTask": "build",
             "windows": {
                 "program": "${workspaceFolder}/output.Debug.AnyCPU/TestFloatingPoint.exe",    
             },

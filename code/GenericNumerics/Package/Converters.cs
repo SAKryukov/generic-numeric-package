@@ -7,23 +7,23 @@
 namespace SA.GenericNumerics {
 
     public interface IConverter<NUM> {
-        static abstract NUM FromInteger(int value);
-        static abstract NUM FromDouble(double value);
+        static abstract NUM FromInteger(long i);
+        static abstract NUM FromDouble(double d);
     } //interface IConverter
 
     public struct HalfConverter : IConverter<System.Half> {
-        static System.Half IConverter<System.Half>.FromInteger(int value) => (System.Half)value;
-        static System.Half IConverter<System.Half>.FromDouble(double value) => (System.Half)value;
+        static System.Half IConverter<System.Half>.FromInteger(long i) => (System.Half)i;
+        static System.Half IConverter<System.Half>.FromDouble(double d) => (System.Half)d;
     } //HalfConverter
 
     public struct FloatConverter : IConverter<float> {
-        static float IConverter<float>.FromInteger(int value) => value;
-        static float IConverter<float>.FromDouble(double value) => (float)value;
+        static float IConverter<float>.FromInteger(long i) => i;
+        static float IConverter<float>.FromDouble(double d) => (float)d;
     } //HalfConverter
 
     public struct DoubleConverter : IConverter<double> {
-        static double IConverter<double>.FromInteger(int value) => value;
-        static double IConverter<double>.FromDouble(double value) => value;
+        static double IConverter<double>.FromInteger(long i) => i;
+        static double IConverter<double>.FromDouble(double d) => d;
     } //DoubleConverter
 
 }
