@@ -4,8 +4,6 @@
     https://github.com/SAKryukov
 */
 
-using System.Security.Cryptography;
-
 namespace SA.GenericNumerics {
 
     public static class StructuredPackage<NUM> where NUM :
@@ -17,12 +15,10 @@ namespace SA.GenericNumerics {
             public static NUM Calculate(NUM a, NUM b) => a + b;
             public static NUM CalculateMore(NUM a, NUM b) => a * b;
         } //class Sample
-    } //StructuredPackage<NUM>
+        
+    } //StructuredPackage
 
-    public static class Package<NUM, CONVERTER> where NUM :
-        System.Numerics.IBinaryFloatingPointIeee754<NUM>
-        where CONVERTER: IConverter<NUM>
-    {
+    public static partial class Library<NUM, CONVERTER> {
 
         public static class OperatorSample {
             public static NUM Calculate(NUM a, NUM b) =>

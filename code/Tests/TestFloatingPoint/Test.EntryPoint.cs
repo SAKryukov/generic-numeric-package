@@ -5,10 +5,9 @@
 */
 
 namespace SA.Tests {
-    using DoubleSpecialization = GenericNumerics.Package<double, GenericNumerics.DoubleConverter>;
-    using FloatSpecialization = GenericNumerics.Package<float, GenericNumerics.FloatConverter>;
-    using HalfSpecialization = GenericNumerics.Package<System.Half, GenericNumerics.HalfConverter>;
-    using DoubleNumericalIntegration = NumericalIntegration.IntegrationPackage<double, GenericNumerics.DoubleConverter>;
+    using FloatSpecialization = GenericNumerics.Library<float, GenericNumerics.FloatConverter>;
+    using HalfSpecialization = GenericNumerics.Library<System.Half, GenericNumerics.HalfConverter>;
+    using DoubleSpecialization = GenericNumerics.Library<double, GenericNumerics.DoubleConverter>;
     using Complex = System.Numerics.Complex;
     using ComplexSpecialization = GenericNumerics.StructuredPackage<System.Numerics.Complex>;
     using static System.Console;
@@ -26,7 +25,14 @@ namespace SA.Tests {
         static System.Half Test3(System.Half a, System.Half b) =>
             HalfSpecialization.MathFunctions.CalculateMore(a, b);
         static void Test4() {
-            WriteLine(DoubleNumericalIntegration.Simpson.Integral(40000, 1, 2, x => 1 / (x*x + 1)  ));            
+            WriteLine(DoubleSpecialization.SimpsonRule.Integrate(0.4, 8, x => 1/double.Sqrt(1 + x), 40000));            
+            WriteLine(DoubleSpecialization.GaussKronrodQuadrature.Integrate(0.4, 8, x => 1/double.Sqrt(1 + x) ));
+            WriteLine($"Half x => 1/double.Sqrt(1 + x)");
+            WriteLine(HalfSpecialization.SimpsonRule.Integrate((System.Half)0.4, (System.Half)8, x => (System.Half)1/System.Half.Sqrt((System.Half)1 + x), 4000));            
+            WriteLine(HalfSpecialization.GaussKronrodQuadrature.Integrate((System.Half)0.4, (System.Half)8, x => (System.Half)1/System.Half.Sqrt((System.Half)1 + x) ));            
+            WriteLine($"Float x => 1/double.Sqrt(1 + x)");
+            WriteLine(FloatSpecialization.SimpsonRule.Integrate(0.4f, 8, x => 1/float.Sqrt(1f + x), 4000));            
+            WriteLine(FloatSpecialization.GaussKronrodQuadrature.Integrate(0.4f, 8, x => 1/float.Sqrt(1 + x) ));
         } //Test4
 
         static void Main() {
