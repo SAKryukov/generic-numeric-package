@@ -2,5 +2,7 @@
 https://en.wikipedia.org/wiki/Clenshaw–Curtis_quadrature
 https://people.math.ethz.ch/~waldvoge/Papers/fejer.pdf
 
+https://math.libretexts.org/Workbench/Numerical_Methods_with_Applications_(Kaw)/7%3A_Integration/7.05%3A_Gauss_Quadrature_Rule_of_Integration
+
 There are exercises (for testing)
 https://www.whitman.edu/mathematics/calculus_online/section08.06.html

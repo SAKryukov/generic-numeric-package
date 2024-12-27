@@ -25,6 +25,7 @@ namespace SA.Tests {
         static System.Half Test3(System.Half a, System.Half b) =>
             HalfSpecialization.MathFunctions.CalculateMore(a, b);
         static void Test4() {
+            WriteLine("Gauss-Kronrod:");
             WriteLine(DoubleSpecialization.SimpsonRule.Integrate(0.4, 8, x => 1/double.Sqrt(1 + x), 40000));            
             WriteLine(DoubleSpecialization.GaussKronrodQuadrature.Integrate(0.4, 8, x => 1/double.Sqrt(1 + x) ));
             WriteLine($"Half x => 1/double.Sqrt(1 + x)");
@@ -33,14 +34,16 @@ namespace SA.Tests {
             WriteLine($"Float x => 1/double.Sqrt(1 + x)");
             WriteLine(FloatSpecialization.SimpsonRule.Integrate(0.4f, 8, x => 1/float.Sqrt(1f + x), 4000));            
             WriteLine(FloatSpecialization.GaussKronrodQuadrature.Integrate(0.4f, 8, x => 1/float.Sqrt(1 + x) ));
+            WriteLine("Gauss:");
+            WriteLine(DoubleSpecialization.GaussQuadrature.Integrate(0.4, 8, x => 1/double.Sqrt(1 + x) ));
         } //Test4
 
         static void Main() {
             Test4();
-            WriteLine(Test1(1, 2));
-            WriteLine(Test2(3, 4));
-            WriteLine(Test3((System.Half)0.5, (System.Half)0.6));
-            WriteLine(ComplexSpecialization.Sample.Calculate(new Complex(1, 2), new Complex(3, 4)));
+            //WriteLine(Test1(1, 2));
+            //WriteLine(Test2(3, 4));
+            //WriteLine(Test3((System.Half)0.5, (System.Half)0.6));
+            //WriteLine(ComplexSpecialization.Sample.Calculate(new Complex(1, 2), new Complex(3, 4)));
         } //Main
 
     } //class Tests

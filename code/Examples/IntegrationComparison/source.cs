@@ -1,5 +1,3 @@
-using System;
-
 namespace SA.GenericNumerics {
 
     public static partial class Library<NUM, CONVERTER> {
@@ -18,12 +16,12 @@ namespace SA.GenericNumerics {
         } //internal
 
         static readonly NodeWeight[] pointsGaussKronrod = [
-            // Gauss:
+            // Gauss 7-point:
             new (0.949107912342759, 0.129484966168870),
             new (0.741531185599394, 0.279705391489277),
             new (0.405845151377397, 0.381830050505119),
             new (0, 0.417959183673469, single: true),
-            // Kronrod:
+            // Kronrod 15-point:
             new (0.991455371120813, 0.022935322010529),
             new (0.949107912342759, 0.063092092629979),
             new (0.864864423359769, 0.104790010322250),
@@ -33,6 +31,25 @@ namespace SA.GenericNumerics {
             new (0.207784955007898, 0.204432940075298),
             new (0, 0.209482141084728, single: true),
         ];
+        static readonly NodeWeight[] pointsGauss = [ //six-point
+            new (0.238619186, 0.467913935),
+            new (0.360761573, 0.661209386),
+            new (0.171324492, 0.932469514),
+        ];
+
+        public static class GaussQuadrature {
+            public static NUM Integrate(NUM from, NUM to, SingleArgumentFunction f) {
+                NUM width = to - from;
+                NUM sum = zero;
+                for (int point = 0; point < pointsGauss.Length; ++point) {
+                    NUM weight = CONVERTER.FromDouble(pointsGauss[point].Weight) * width / four; //SA???
+                    NUM position1 = (-CONVERTER.FromDouble(pointsGauss[point].Node) + one) * width / two + from;
+                    NUM position2 = (+CONVERTER.FromDouble(pointsGauss[point].Node) + one) * width / two + from;
+                    sum += weight * f(position1) + weight * f(position2);
+                } //loop
+                return sum;
+            } //Integrate
+        } //class GaussQuadrature
 
         public static class GaussKronrodQuadrature {
             public static NUM Integrate(NUM from, NUM to, SingleArgumentFunction f) {
