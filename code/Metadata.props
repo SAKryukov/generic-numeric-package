@@ -7,18 +7,20 @@
 <Project>
  
   <PropertyGroup> <!-- customize:  -->
+
+    <TargetFramework>net9.0</TargetFramework>
     <CustomUnifiedVersion>0.1.0.0</CustomUnifiedVersion>
     <!-- can be alpha, beta, RC1, RC2, etc.: -->
     <CustomInformationalVersionSuffix></CustomInformationalVersionSuffix>
+
     <Copyright>Copyright © 2024 Sergey A Kryukov</Copyright>
     <Product>Generic Numerics</Product>
     <Description>Generic techniques for numerical packages</Description>
     <Company>SA</Company>
     <AssemblyTitle>$(Product) Demo</AssemblyTitle>
-  </PropertyGroup>
 
-  <PropertyGroup> <!-- customize:  -->
     <RootNamespace>SA</RootNamespace>
+
   </PropertyGroup>
 
 </Project>
