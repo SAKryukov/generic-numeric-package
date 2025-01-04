@@ -8,7 +8,8 @@
  
   <PropertyGroup> <!-- customize:  -->
 
-    <TargetFramework>net9.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework> <!-- 7 is the minimal possibile version for this code -->
+    <LangVersion>12.0</LangVersion> <!-- minimum possible version for this code, default for .NET 8 -->
     <CustomUnifiedVersion>0.1.0.0</CustomUnifiedVersion>
     <!-- can be alpha, beta, RC1, RC2, etc.: -->
     <CustomInformationalVersionSuffix></CustomInformationalVersionSuffix>
