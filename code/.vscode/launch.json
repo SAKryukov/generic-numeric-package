@@ -14,11 +14,11 @@
             "name": "Debug",
             "type": "coreclr",
             "request": "launch",
-            //"preLaunchTask": "build",
+            "preLaunchTask": "build",
             "windows": {
-                "program": "${workspaceFolder}/output.Debug.AnyCPU/TestFloatingPoint.exe",    
+                "program": "${workspaceFolder}/output.AnyCPU.Debug/TestFloatingPoint.exe",    
             },
-            "program": "${workspaceFolder}/output.Debug.AnyCPU/TestFloatingPoint",
+            "program": "${workspaceFolder}/output.AnyCPU.Debug/TestFloatingPoint",
             "stopAtEntry": true,
             "logging":{
                 "moduleLoad": false
